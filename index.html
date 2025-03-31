@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Sistema de Comentários</title>
+</head>
+<body>
+ <!-- Dados do usuário (simulados - substitua pela integração real) -->
+ <script>
+    // EXEMPLO: Substitua isso pela integração com seu sistema de login
+    const loggedInUser = {
+      isLoggedIn: true, // Mude para false para simular usuário anônimo
+      nickname: "DevMaster",
+      avatar: "https://i.pravatar.cc/150?img=5" // URL da imagem do perfil
+    };
+  </script>
+
+  <div class="comments-container">
+    <div class="comments-header">
+      <h2 class="comments-title">Comentários</h2>
+      <div>
+        <span class="comments-count">0 Comentários</span>
+        <button id="theme-toggle" class="theme-btn">🌙</button>
+      </div>
+    </div>
+    
+    <div class="reactions-section">
+      <div class="reactions-prompt">Reagir ao conteúdo:</div>
+      <div class="emoji-container">
+        <button class="emoji-btn" data-emoji="👍">👍</button>
+        <button class="emoji-btn" data-emoji="❤️">❤️</button>
+        <button class="emoji-btn" data-emoji="😂">😂</button>
+        <button class="emoji-btn" data-emoji="😮">😮</button>
+        <button class="emoji-btn" data-emoji="😢">😢</button>
+        <button class="emoji-btn" data-emoji="😠">😠</button>
+      </div>
+      <div class="reactions-count">0 reações</div>
+    </div>
+    
+    <div class="comment-form">
+      <textarea class="comment-input" placeholder="Adicione seu comentário..." id="main-comment"></textarea>
+      <div class="form-actions">
+        <div class="formatting-tools">
+          <button class="format-btn" data-tag="spoiler">Spoiler</button>
+          <button class="format-btn" data-tag="bold">Negrito</button>
+        </div>
+        <button class="submit-btn" id="submit-comment">Comentar</button>
+      </div>
+    </div>
+
+    <div class="comments-list" id="comments-list"></div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
